@@ -13,6 +13,7 @@ import {
 import baseRoutes, { errorRoute } from "./base";
 import emits from "@/utils/emits";
 import { EMitt } from "@/constants/enum";
+import appConfig from "@/constants/app.ts";
 
 interface dynamicRouteParams {
   path: string;

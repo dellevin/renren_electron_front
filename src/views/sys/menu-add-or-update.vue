@@ -34,6 +34,7 @@
         <el-radio-group v-model="dataForm.openStyle">
           <el-radio :label="0">内部打开</el-radio>
           <el-radio :label="1">外部打开</el-radio>
+          <!-- <el-radio :label="2">无需登录访问</el-radio> -->
         </el-radio-group>
       </el-form-item>
       <el-form-item prop="permissions" label="授权标识">
@@ -86,7 +87,7 @@ const dataForm = reactive({
   permissions: "",
   sort: 0,
   icon: "",
-  openStyle: 0
+  openStyle: 0,
 });
 
 const rules = ref({
@@ -146,6 +147,7 @@ const getInfo = (id: number) => {
     if (dataForm.pid === "0") {
       return deptListTreeSetDefaultHandle();
     }
+    console.log(dataForm)
     menuListTree.value.setCurrentKey(dataForm.pid);
   });
 };

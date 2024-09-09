@@ -8,7 +8,6 @@ export default {
    * 系统版本号，自动读取package.json中的version字段
    */
   version: appPack.version,
-
   /**
    * 系统默认语言
    */
@@ -32,7 +31,6 @@ export default {
    * 网络请求超时时间，单位毫秒
    */
   requestTimeout: 30000,
-
   /**
    * 全屏渲染的页面
    */
